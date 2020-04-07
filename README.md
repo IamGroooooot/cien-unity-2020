@@ -32,9 +32,13 @@
     - 매주 10분짜리 숙제가 있을 수 있다
     - 숙제는 남아서 같이하고 가셔도 됩니다!
 
+## 준비해야 할 것
+> `Visual Studio Community`와 `Unity 2018.*.* LTS`이 설치된 노트북
+설치법: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%A4%80%EB%B9%84.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%A4%80%EB%B9%84.pdf)
+
 ---
 
-## 일정
+## 일정 [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EA%B3%84%ED%9A%8D.pdf) [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EA%B3%84%ED%9A%8D.pptx)
 
 ### 1주차. 유니티 시작하기
 #### 1주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/1.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/1.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pdf)
@@ -137,17 +141,27 @@
 - 공유
 
 ### 특강. Git을 사용한 파일 관리
-> Source Tree를 사용한 파일 버전관리 시작하기
- - Stage하기
+#### Source Tree 설치법: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/Git%20%ED%8A%B9%EA%B0%95/Source%20Tree%20%EC%84%A4%EC%B9%98%EB%B2%95.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/Git%20%ED%8A%B9%EA%B0%95/Source%20Tree%20%EC%84%A4%EC%B9%98%EB%B2%95.pdf)
+#### Git 특강 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/Git%20%ED%8A%B9%EA%B0%95/Git%20%ED%8A%B9%EA%B0%95(Source%20Tree%20%EC%82%AC%EC%9A%A9%EB%B2%95).pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/Git%20%ED%8A%B9%EA%B0%95/Git%20%ED%8A%B9%EA%B0%95(Source%20Tree%20%EC%82%AC%EC%9A%A9%EB%B2%95).pdf)
+> Source Tree로 버전 관리하기
+ - Git이 필요한 이유
+ - Stage(=Index에 기록)하기
  - Commit하기
- - Reset하기
- - Remote 설정하기
-    - 우리는 GitHub를 사용함
+ - Remote 추가하기
+    - Origin Remote로 GitHub 사용
  - Push하기
  - Clone하기
- - Pull하기
+ - Reset (Soft, Hard, Mixed)
+ - Revert
+ - Checkout, Detached HEAD
+ - 이전 Commit 수정하기
+ - Pull / Fetch&Merge하기
  - Branch 만들기
- - Merge하기
- - Conflict 해결하기
-    - 이때는 Visual Studio 이용함
- - (시간이 남으면) Stash로 해결하기
+ - Fast Forward Merge하기
+ - 3-Way Merge하기
+ - 3-Way Merge에서 발생할 수 있는 Conflict 해결하기
+   - Visual Studio로 Conflict 해결하는 법
+ - Stash로 다양한 문제 해결해보기
+   - 오래된 저장소에서 Pull하기
+   - 다른 브랜치로 Commit 옮기기
+ - .gitignore 파일 설정하기
