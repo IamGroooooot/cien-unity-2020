@@ -37,8 +37,8 @@
 ## 일정
 
 ### 1주차. 유니티 시작하기
+#### 1주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/1.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/1.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pdf)
  - 유니티 소개
- - 유니티 허브 설치
  - 유니티 실행
  - 기본 용어 정리
  - 레이아웃과 뷰
