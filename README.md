@@ -34,6 +34,7 @@
 
 ## 준비해야 할 것
 > `Visual Studio Community`와 `Unity 2018.*.* LTS`이 설치된 노트북
+
 설치법: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%A4%80%EB%B9%84.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EC%A4%80%EB%B9%84.pdf)
 
 ---
