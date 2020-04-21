@@ -83,7 +83,7 @@
 > Flappy Bird의 새의 점프 구현하는 것은 숙제로 대체 가능
 
 #### Flappy Bird Jump 예시: CustomJump.cs
-결과: https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/
+결과: [https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/](https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/)
 
 ``` csharp
 using UnityEngine;
