@@ -56,6 +56,7 @@
 > 책상 만들기는 숙제로 대체 가능
 
 ### 2주차. 유니티 스크립트
+#### 2주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/2.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/2.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.pdf)
  - 스크립트 개념
     - Start()
     - Update()
