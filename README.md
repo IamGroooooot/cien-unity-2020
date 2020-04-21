@@ -99,14 +99,14 @@ public class CustomJump : MonoBehaviour
 
     private void Start()
     {
+        // 속도 초기화
         vel = Vector3.zero;
+        // 중력 설정
+        acc = new Vector3(0, GRAVITY, 0);
     }
 
     void Update()
     {
-        // 중력 설정
-        acc = new Vector3(0, GRAVITY, 0);
-
         // 스페이스바 누르면 점프!
         if (Input.GetKeyDown(KeyCode.Space))
         {
