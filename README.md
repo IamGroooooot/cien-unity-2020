@@ -59,19 +59,21 @@
  - 스크립트 개념
     - Start()
     - Update()
+    - 이벤트 함수들의 실행 순서
+    - public인 변수들
+    - Debug.Log
  - 입력 처리
     - Input.GetKey(키코드)
         - \*Key, \*KeyDown, \*KeyUp
     - 입력 받아서 플레이어 움직이기
+ - Vector3
+ - struct 주의점
+ - Translate
  - 처음보는 함수 -> 유니티 Document
  - frame과 deltaTime 
     - framerate independent하다는 것은 무슨 말인가
-    - 플레이어 시간과 비례하도록 움직이기
- - 물체 회전 구현
-    - Euler Angle
-    - Pivot
-    - 특정 물체 바라보게 하기
-        - transform.LookAt(target);
+    - 플레이어를 시간과 비례하도록 움직이기
+ - 물체의 이동과 회전
  - 에셋스토어
     - 주인공/배경/... 꾸미기
  - Flappy Bird의 새의 점프 구현하기
