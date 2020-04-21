@@ -81,7 +81,56 @@
     - 계속 점프가 가능해야 함
     - 컴퓨터 성능과 무관해야 함
 > Flappy Bird의 새의 점프 구현하는 것은 숙제로 대체 가능
- 
+
+#### Flappy Bird Jump 예시: CustomJump.cs
+``` csharp
+using UnityEngine;
+
+public class CustomJump : MonoBehaviour
+{
+    public float jumpPower = 5f; // 점프 Force
+
+    private const float GRAVITY = -9.81f; // 중력 가속도
+
+    private Vector3 vel; // 현재 속도
+    private Vector3 acc; // 현재 가속도
+
+    private void Start()
+    {
+        vel = Vector3.zero;
+    }
+
+    void Update()
+    {
+        // 중력 설정
+        acc = new Vector3(0, GRAVITY, 0);
+
+        // 스페이스바 누르면 점프!
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            vel.y = jumpPower;
+        }
+        
+        // 가속도 적용
+        vel += acc * Time.deltaTime;
+
+        // 땅으로 떨어지거나 하늘로 날아가지 않습니다
+        if(transform.position.y < -0.5f)
+        {
+            if (vel.y < 0) vel = Vector3.zero;
+        }
+        else if(transform.position.y > 5)
+        {
+            if (vel.y > 0) vel = Vector3.zero;
+        }
+
+        // 속도만큼 이동시킨다
+        transform.Translate(vel * Time.deltaTime);
+    }
+}
+```
+
+
 ### 3주차. 물리 엔진
  - 물리 엔진이란 개념을 이해
     - 이미 framerate independent하므로 delataTime 써줄 필요 X
