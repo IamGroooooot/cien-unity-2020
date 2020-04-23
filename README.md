@@ -61,26 +61,31 @@
     - Start()
     - Update()
     - 이벤트 함수들의 실행 순서
+    - Quiz. Class vs Instance
     - public인 변수들
     - Debug.Log
  - 입력 처리
     - Input.GetKey(키코드)
         - \*Key, \*KeyDown, \*KeyUp
+    - Input.GetMouseButton(0) // 0: 좌클릭, 1: 우클릭, 2: 중간(휠) 클릭
     - 입력 받아서 플레이어 움직이기
  - Vector3
+     - 내적(dot)/외적(cross)
+     - 사칙연산
  - struct 주의점
- - Translate
+     - Quiz. struct vs class, 복사할 때 value type과 reference type의 동작 방식 
+     - `transform.position.x = 2.3f;`가 사실은 `transform.GetPosition().x = 2.3f;`였다! 그래서 미리 컴파일러가 막아준다
+ - Translate self/global
  - 처음보는 함수 -> 유니티 Document
  - frame과 deltaTime 
     - framerate independent하다는 것은 무슨 말인가
     - 플레이어를 시간과 비례하도록 움직이기
  - 물체의 이동과 회전
  - 에셋스토어
-    - 주인공/배경/... 꾸미기
  - Flappy Bird의 새의 점프 구현하기
     - 계속 점프가 가능해야 함
     - 컴퓨터 성능과 무관해야 함
-> Flappy Bird의 새의 점프 구현하는 것은 숙제로 대체 가능
+> Flappy Bird 1(position만 이용해서 점프 구현하기)
 
 #### Flappy Bird Jump 예시: CustomJump.cs
 결과: [https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/](https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/)
