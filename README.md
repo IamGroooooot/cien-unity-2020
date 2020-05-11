@@ -139,23 +139,23 @@ public class CustomJump : MonoBehaviour
 
 
 ### 3주차. 물리 엔진
- - 물리 엔진이란 개념을 이해
-    - 이미 framerate independent하므로 delataTime 써줄 필요 X
-    - 연산 타이밍? FixedUpdate()란?
- - 강체(Rigidbody) Component로 이동 다시 구현
-    - Vector3 구조체
-    - rb = GetComponent<RigidBody>()
-    - rb.velocity = [Vector3]
-    - rb.AddForce([Vector3])
+#### 3주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pdf)
+ - 물리 엔진이란?
+    - 연산 타이밍 - `FixedUpdate()`
+ - 강체(Rigidbody) Component
+    - 강체의 정의
+    - 이동
+      - `rb = GetComponent<RigidBody>()`
+      - `rb.velocity = new Vector3(0, 1, 0)`
+      - `rb.AddForce(0, 500, 0)`
  - 충돌
     - Collider
     - Collision / Trigger
-        - On\*Enter(), On\*Stay(), On\*Exit()
- - 짧은 맵의 Flappy Bird를 구현해보기
+        - Enter, Stay, Exit
+ - Flappy Bird를 구현해보기
     - 벽과 충돌하면 "GameOver" 출력
-    - 화면 이탈 시 "GameOver" 출력
     - 물리 엔진으로 점프 구현
-    - 모두 클리어시 "GameClear" 출력 
+    - GitHub에 gitignore까지 설정해서 올려보기
 
 ### 4주차. 프리팹
  - 프리팹
