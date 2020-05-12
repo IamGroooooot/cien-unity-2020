@@ -139,7 +139,7 @@ public class CustomJump : MonoBehaviour
 
 
 ### 3주차. 물리 엔진
-#### 3주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pdf)
+#### 3주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pdf)
  - 물리 엔진이란?
     - 연산 타이밍 - `FixedUpdate()`
  - 강체(Rigidbody) Component
