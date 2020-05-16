@@ -5,6 +5,7 @@
 ## 대상
  - 간단하게 프로그래밍을 할 수 있는 분들
     - 변수(int, float, double), 조건문(if), 반복문(while, for), 함수(메서드)를 이해하고 있다
+ 
  > 프로그래밍을 처음하는 분들은 힘들 수도 있습니다
 
 ## 목표
@@ -24,6 +25,7 @@
 
 ## 스터디 방식
  > 일주일에 한번(시험기간 제외) / 총 7번 수업
+ 
  - 2시간 수업
     - 1시간 30분: 유니티 개념 강의
     - 20분: 실습
@@ -161,6 +163,7 @@ public class CustomJump : MonoBehaviour
     - Collider
     - Collision / Trigger
         - Enter, Stay, Exit
+ 
  > 숙제: 오늘 배운 `Collider`/`Trigger`/`Collision` 사용한 아무런 유니티 프로젝트 만들기
  
  > 제출: 위의 유니티 프로젝트를 [GitHub](https://github.com/)에 올린 후 링크 여기 톡방에 투척!
@@ -192,6 +195,7 @@ public class CustomJump : MonoBehaviour
  - 적기(Enemy) 만들기
  - 미사일 쏘는 적기 만들기
     - 플레이어가 적기의 미사일에 맞으면 "아야" 출력
+
 > 미사일 쏘는 적기 만들기는 숙제로 대체 가능
 
 ---
@@ -208,6 +212,7 @@ public class CustomJump : MonoBehaviour
     - 랜덤으로 생성 됨
     - 3초 후 자동으로 Destroy()
     - 주인공을 추적
+
 > 바로 앞에서 멈추는 유도탄 만들기
 
 ---
