@@ -9,7 +9,7 @@
 
 ## 목표
  - 유니티의 기본적인 조작을 할 수 있다
- - 유니티에서 C#을 사용해서 스크립트를 만들고 사용할 수 있다
+ - 유니티에서 `C#`을 사용해서 스크립트를 만들고 사용할 수 있다
  - 유니티 물리엔진을 이해하고 사용할 수 있다
     - 강체(Rigidbody): Velocity, Force, Mass, ... 
     - 충돌: Collision, Collider
@@ -20,7 +20,7 @@
     - ...
  - 게임의 데이터를 저장하고 불러올 수 있다
  - 유니티를 하면서 발생하는 오류들을 해결할 수 있다
-    - 구글, Stackoverflow, Manual, ... 검색 많이 해보기
+    - 구글링, Stackoverflow, Manual, ... 검색 많이 해보기
 
 ## 스터디 방식
  > 일주일에 한번(시험기간 제외) / 총 7번 수업
@@ -39,7 +39,7 @@
 
 ---
 
-## 일정 [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EA%B3%84%ED%9A%8D.pdf) [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EA%B3%84%ED%9A%8D.pptx)
+### 일정 [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EA%B3%84%ED%9A%8D.pdf) [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/%EC%8A%A4%ED%84%B0%EB%94%94%20%EA%B3%84%ED%9A%8D.pptx)
 
 ### 1주차. 유니티 시작하기
 #### 1주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/1.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/1.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pdf)
@@ -57,6 +57,8 @@
 
 - Material을 사용해보자
 
+---
+
 ### 2주차. 유니티 스크립트
 #### 2주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/2.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/2.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.pdf)
  - 스크립트 개념
@@ -65,10 +67,10 @@
     - 이벤트 함수들의 실행 순서
     - Quiz. Class vs Instance
     - public인 변수들
-    - Debug.Log
+    - Debug.Log()
  - 입력 처리
     - Input.GetKey(키코드)
-        - \*Key, \*KeyDown, \*KeyUp
+        - Key, KeyDown, KeyUp
     - Input.GetMouseButton(0) // 0: 좌클릭, 1: 우클릭, 2: 중간(휠) 클릭
     - 입력 받아서 플레이어 움직이기
  - Vector3
@@ -77,11 +79,12 @@
  - struct 주의점
      - Quiz. struct vs class, 복사할 때 value type과 reference type의 동작 방식 
      - `transform.position.x = 2.3f;`가 사실은 `transform.GetPosition().x = 2.3f;`였다! 그래서 미리 컴파일러가 막아준다
- - Translate self/global
+ - Translate - self vs global
  - 처음보는 함수 ➡ [유니티 매뉴얼](https://docs.unity3d.com/kr/current/Manual/index.html)
  - Frame과 deltaTime
     - Framerate Independent하게 만들자!
-    - 플레이어를 시간과 비례하도록 움직이기
+    - `Update() { "오른쪽으로 한칸 움직여라" }`는 컴퓨터 성능과 비례한다
+    - 모든 물체를 시간과 비례하도록 움직이게 해야한다
  - 물체의 이동과 회전
  - 에셋스토어
  
@@ -141,11 +144,14 @@ public class CustomJump : MonoBehaviour
 }
 ```
 
+---
+
 ### 3주차. 물리엔진
 #### 3주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pdf)
  - 물리엔진이란?
-    - 연산 타이밍 - `FixedUpdate()`
- - 강체(Rigidbody) Component
+    - 연산 타이밍?
+    - `FixedUpdate()`
+ - 강체(Rigidbody) 컴포넌트
     - 강체 - 물리에서의 정의와 유니티에서의 정의)
     - 물리엔진을 사용해보자
       - `rb = GetComponent<RigidBody>()`
@@ -159,7 +165,7 @@ public class CustomJump : MonoBehaviour
  
  > 제출: 위의 유니티 프로젝트를 [GitHub](https://github.com/)에 올린 후 링크 여기 톡방에 투척!
  
-#### 제출 방법
+###### 제출 방법
  1. [GitHub](https://github.com/)에서 새로운 저장소(Repository)를 만든다.
    - 저장소의 이름은 자유롭게 설정
    - Description해도 되고 안해도 됨 (간략한 저장소 설명)
@@ -176,15 +182,19 @@ public class CustomJump : MonoBehaviour
  7. [GitHub](https://github.com/)에 들오가서 잘올라갔는지 확인한다
  8. 링크 톡방에 투척한다
 
+---
+
 ### 4주차. 프리팹
  - 프리팹
  - 미사일 만들기
  - 미사일 생성하기
-    - `Instantiate()`
+    - `Instantiate(복제대상)`
  - 적기(Enemy) 만들기
  - 미사일 쏘는 적기 만들기
     - 플레이어가 적기의 미사일에 맞으면 "아야" 출력
 > 미사일 쏘는 적기 만들기는 숙제로 대체 가능
+
+---
 
 ### 5주차. 적기 구현 및 적 매니저
 - 적기 추가 및 이동
@@ -200,6 +210,8 @@ public class CustomJump : MonoBehaviour
     - 주인공을 추적
 > 바로 앞에서 멈추는 유도탄 만들기
 
+---
+
 ### 6주차. 유니티 UI
 - UI 구성
     - 캔버스
@@ -208,10 +220,12 @@ public class CustomJump : MonoBehaviour
 - 텍스트
 - 버튼
 - 씬(Scene) 이동
-    - GameOver씬
+    - GameOver 씬
 - 점수창 만들기
     - 점수 매니저
-    
+
+---
+
 ### 7주차. 게임 데이터 관리
 - PlayerPref
     - Enum
@@ -219,6 +233,8 @@ public class CustomJump : MonoBehaviour
     - Load
 - 빌드하기
 - 공유
+
+---
 
 ### 특강. Git을 사용한 파일 관리
 #### Source Tree 설치법: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/Git%20%ED%8A%B9%EA%B0%95/Source%20Tree%20%EC%84%A4%EC%B9%98%EB%B2%95.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/Git%20%ED%8A%B9%EA%B0%95/Source%20Tree%20%EC%84%A4%EC%B9%98%EB%B2%95.pdf)
@@ -247,3 +263,7 @@ public class CustomJump : MonoBehaviour
    - 오래된 저장소에서 Pull하기
    - 다른 브랜치로 Commit 옮기기
  - .gitignore 파일 설정하기
+
+---
+
+수업 영상: [유튜브](https://www.youtube.com/playlist?list=PLl6IHQS9eTa0tv32BOR_jMvp1uatayAjs)
