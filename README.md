@@ -89,7 +89,7 @@
 
 - 계속 점프가 가능해야 함
 - 컴퓨터 성능과 무관해야 함
-- `trasnsform.position`만 이용해서 점프 구현
+- `transform.position`만 이용해서 점프 구현
 
 #### Flappy Bird Jump 예시: CustomJump.cs
 결과: [https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/](https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/)
@@ -159,7 +159,7 @@ public class CustomJump : MonoBehaviour
  
  > 제출: 위의 유니티 프로젝트를 [GitHub](https://github.com/)에 올린 후 링크 여기 톡방에 투척!
  
- **<제출 방법>**
+#### 제출 방법
  1. [GitHub](https://github.com/)에서 새로운 저장소(Repository)를 만든다.
    - 저장소의 이름은 자유롭게 설정
    - Description해도 되고 안해도 됨 (간략한 저장소 설명)
