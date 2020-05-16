@@ -15,7 +15,7 @@
     - 충돌: Collision, Collider
  - 기초적인 UI를 만들 수 있다
     - 버튼 클릭
-    - 씬이동
+    - 씬 이동
     - HP바
     - ...
  - 게임의 데이터를 저장하고 불러올 수 있다
@@ -52,8 +52,10 @@
  - 카메라
  - 빈 게임 오브젝트
  - 기본 오브젝트들
- - 책상 만들기
-> 책상 만들기는 숙제로 대체 가능
+
+> 숙제: 책상 만들기
+
+- Material을 사용해보자
 
 ### 2주차. 유니티 스크립트
 #### 2주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/2.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/2.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8.pdf)
@@ -76,16 +78,18 @@
      - Quiz. struct vs class, 복사할 때 value type과 reference type의 동작 방식 
      - `transform.position.x = 2.3f;`가 사실은 `transform.GetPosition().x = 2.3f;`였다! 그래서 미리 컴파일러가 막아준다
  - Translate self/global
- - 처음보는 함수 -> 유니티 Document
- - frame과 deltaTime 
-    - framerate independent하다는 것은 무슨 말인가
+ - 처음보는 함수 ➡ [유니티 매뉴얼](https://docs.unity3d.com/kr/current/Manual/index.html)
+ - Frame과 deltaTime
+    - Framerate Independent하게 만들자!
     - 플레이어를 시간과 비례하도록 움직이기
  - 물체의 이동과 회전
  - 에셋스토어
- - Flappy Bird의 새의 점프 구현하기
-    - 계속 점프가 가능해야 함
-    - 컴퓨터 성능과 무관해야 함
-> Flappy Bird 1(position만 이용해서 점프 구현하기)
+ 
+> 숙제: Flappy Bird의 새의 점프 구현하기
+
+- 계속 점프가 가능해야 함
+- 컴퓨터 성능과 무관해야 함
+- `trasnsform.position`만 이용해서 점프 구현
 
 #### Flappy Bird Jump 예시: CustomJump.cs
 결과: [https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/](https://iamgroooooot.github.io/cien-unity-2020/jump-using-position/)
@@ -137,14 +141,13 @@ public class CustomJump : MonoBehaviour
 }
 ```
 
-
-### 3주차. 물리 엔진
+### 3주차. 물리엔진
 #### 3주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/3.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%20%EB%AC%BC%EB%A6%AC%EC%97%94%EC%A7%84.pdf)
- - 물리 엔진이란?
+ - 물리엔진이란?
     - 연산 타이밍 - `FixedUpdate()`
  - 강체(Rigidbody) Component
-    - 강체의 정의
-    - 이동
+    - 강체 - 물리에서의 정의와 유니티에서의 정의)
+    - 물리엔진을 사용해보자
       - `rb = GetComponent<RigidBody>()`
       - `rb.velocity = new Vector3(0, 1, 0)`
       - `rb.AddForce(0, 500, 0)`
@@ -152,16 +155,32 @@ public class CustomJump : MonoBehaviour
     - Collider
     - Collision / Trigger
         - Enter, Stay, Exit
- - Flappy Bird를 구현해보기
-    - 벽과 충돌하면 "GameOver" 출력
-    - 물리 엔진으로 점프 구현
-    - GitHub에 gitignore까지 설정해서 올려보기
+ > 숙제: 오늘 배운 `Collider`/`Trigger`/`Collision` 사용한 아무런 유니티 프로젝트 만들기
+ 
+ > 제출: 위의 유니티 프로젝트를 [GitHub](https://github.com/)에 올린 후 링크 여기 톡방에 투척!
+ 
+ **<제출 방법>**
+ 1. [GitHub](https://github.com/)에서 새로운 저장소(Repository)를 만든다.
+   - 저장소의 이름은 자유롭게 설정
+   - Description해도 되고 안해도 됨 (간략한 저장소 설명)
+   - Public으로 설정
+   - Initialize with README는 해도 되고 안해도 됨 (README는 프로젝트를 설명하는 파일임)
+   - `.gitignore`를 unity로 설정
+   - Add License해도 되고 안해도 됨 (내 저장소 저작권 설정하는 부분, MIT가 책임질 필요도 없고 무난함)
+  
+ 2. 내 컴퓨터로 `Clone`한다
+ 3. 작업한 유니티 파일을 전부 `Clone`한 저장소로 옮긴다
+ 4. `Stage`에 모두 올린다
+ 5. 적절한 메시지와 함께 `Commit`하기
+ 6. `Push`한다!
+ 7. [GitHub](https://github.com/)에 들오가서 잘올라갔는지 확인한다
+ 8. 링크 톡방에 투척한다
 
 ### 4주차. 프리팹
  - 프리팹
  - 미사일 만들기
  - 미사일 생성하기
-    - Instantiate()
+    - `Instantiate()`
  - 적기(Enemy) 만들기
  - 미사일 쏘는 적기 만들기
     - 플레이어가 적기의 미사일에 맞으면 "아야" 출력
