@@ -193,10 +193,16 @@ public class CustomJump : MonoBehaviour
  - 미사일 생성하기
     - `Instantiate(복제대상)`
  - 적기(Enemy) 만들기
+ - 게임오브젝트 찾기
+    - Find / FindWithTag / FindObjectOfType
+ - 코루틴을 위해 알아야 할 C# 문법
+    - 람다식, IEnumerator, yield
+ - 코루틴(Coroutine)이란?
+    - 예제) Update Timer / Coroutine Timer 
  - 미사일 쏘는 적기 만들기
     - 플레이어가 적기의 미사일에 맞으면 "아야" 출력
 
-> 미사일 쏘는 적기 만들기는 숙제로 대체 가능
+> 숙제. https://github.com/CIEN-Club/workshop-guestbook의 README.md를 읽고 방명록 남기기
 
 ---
 
