@@ -188,6 +188,7 @@ public class CustomJump : MonoBehaviour
 ---
 
 ### 4주차. 프리팹과 코루틴
+#### 4주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/4.%20%ED%94%84%EB%A6%AC%ED%8C%B9%EA%B3%BC%20%EC%BD%94%EB%A3%A8%ED%8B%B4.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/4.%20%ED%94%84%EB%A6%AC%ED%8C%B9%EA%B3%BC%20%EC%BD%94%EB%A3%A8%ED%8B%B4.pdf)
  - 프리팹(Prefab)
    - 미사일 프리팹 만들기
    - 미사일 생성하기
