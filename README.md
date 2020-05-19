@@ -189,12 +189,12 @@ public class CustomJump : MonoBehaviour
 
 ### 4주차. 프리팹
  - 프리팹(Prefab)
- - 미사일 프리팹 만들기
- - 미사일 생성하기
-    - `Instantiate(복제대상)`
+   - 미사일 프리팹 만들기
+   - 미사일 생성하기
+      - `Instantiate(복제대상)`
  - 적기(Enemy) 만들기
  - 게임오브젝트 찾기
-    - Find / FindWithTag / FindObjectOfType 장단점
+    - Find - name, tag, type
  - 코루틴을 위해 알아야 할 C# 문법
     - 람다식, IEnumerator, yield
  - 코루틴(Coroutine)이란?
@@ -210,7 +210,6 @@ public class CustomJump : MonoBehaviour
 - 적기 추가 및 이동
 - 적 이동 패턴 처리
 - 코루틴, Update, Invoke 비교해보기
-    - WaitForSecond() / deltaTime 타이머
 - 피격 처리
     - Tag
 - 적기 생성 매니저 구현
