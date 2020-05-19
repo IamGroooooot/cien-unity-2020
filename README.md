@@ -187,20 +187,19 @@ public class CustomJump : MonoBehaviour
 
 ---
 
-### 4주차. 프리팹
+### 4주차. 프리팹과 코루틴
  - 프리팹(Prefab)
    - 미사일 프리팹 만들기
    - 미사일 생성하기
       - `Instantiate(복제대상)`
- - 적기(Enemy) 만들기
  - 게임오브젝트 찾기
     - Find - name, tag, type
  - 코루틴을 위해 알아야 할 C# 문법
     - 람다식, IEnumerator, yield
  - 코루틴(Coroutine)이란?
     - 예제) Update Timer / Coroutine Timer
- - 미사일 쏘는 적기 만들기
-    - 플레이어가 적기의 미사일에 맞으면 "아야" 출력
+ - ~~미사일 쏘는 적기 만들기~~ (시간이 없어서 못했음)
+    - ~~플레이어가 적기의 미사일에 맞으면 "아야" 출력~~
 
 > 숙제. [https://github.com/CIEN-Club/workshop-guestbook](https://github.com/CIEN-Club/workshop-guestbook)의 README.md를 읽고 저장소에 Push를 해서 방명록 남기기
 
