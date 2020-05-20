@@ -207,7 +207,7 @@ public class CustomJump : MonoBehaviour
 **강의 때 설명한 코드들**
 > 강의 때 설명용으로 보여드린 코드들입니다. 강의자료에는 없기 때문에 따로 올립니다. 복습용으로 사용하세용!
 
-1. 좌클릭할 때 Instantiate하기
+(1) 좌클릭할 때 Instantiate하기
 
 ```csharp
 using UnityEngine;
@@ -233,7 +233,7 @@ public class SpawnManager : MonoBehaviour
 
 <br>
 
-2. Find By
+(2) Find By
 
  - Name: 이름을 바꾸지 못하게 된다
 ```csharp
@@ -257,7 +257,7 @@ target.transform.position = Vector3.zero;
 
 <br>
 
-3. `Lambda`와 `Func`/`Action`
+(3) `Lambda`와 `Func`/`Action`
 
  - `Func<T1, T2, ..., TResult>` = 값을 반환하는 Lambda식
  
@@ -301,7 +301,7 @@ IEnumerator DeadOrAlive()
 
 <br>
 
-4. IEnumerator 열거자란? `Current`, `MoveNext()`
+(4) IEnumerator 열거자란? `Current`, `MoveNext()`
 
 ```csharp
 IEnumerator GiveMeNumber()
@@ -324,7 +324,7 @@ void Start()
 
 <br>
 
-5. 일반적인 함수 vs 코루틴
+(5) 일반적인 함수 vs 코루틴
 
  - 일반적인 함수
  
@@ -394,7 +394,7 @@ public class PrintTest : MonoBehaviour
 
 <br>
 
-6. 업데이트 타이머 vs 코루틴 타이머
+(6) 업데이트 타이머 vs 코루틴 타이머
 
  - 업데이트 타이머
  
