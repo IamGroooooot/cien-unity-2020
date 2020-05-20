@@ -233,19 +233,19 @@ public class SpawnManager : MonoBehaviour
 <br>
 
 2. Find By
- - Name
+ - Name: 이름을 바꾸지 못하게 된다
 ```csharp
 target = GameObject.Find("Target");
 target.transform.position = Vector3.zero;
 ```
 
- - Tag
+ - Tag: 코드에 노출이 잘 안된다
 ```csharp
 target = GameObject.FindGameObjectWithTag("Target");
 target.transform.position = Vector3.zero;
 ```
 
- - Type
+ - Type: 매우 느리다
 ```csharp
 target = GameObject.FindObjectOfType<TargetCtrl>().gameObject;
 target.transform.position = Vector3.zero;
@@ -256,24 +256,25 @@ target.transform.position = Vector3.zero;
 <br>
 
 3. Lambda와 Func/Action
- - Func<T,TResult> = 값을 반환하는 Lambda
+ - Func<T1, T2, ..., TResult> = 값을 반환하는 Lambda식
 ```csharp
-// 람다식 대리자 형식으로 변환해서 호출해보기
+// 값을 반환하는 람다식 대리자 형식으로 변환해서 호출해보기
 Func<int, int, int> addition = (x, y) => x + y;
 Debug.Log(addition(1, 2));
 
-Func<int, int, bool> isSame = (x, y) => x == x;
+Func<int, int, bool> isSame = (x, y) => x == y;
 Debug.Log(isSame(1, 2));
 ```
- - Action<T1,T2> = 값을 반환하지 않는 Lambda
+ - Action<T1, T2, ...> = 값을 반환하지 않는 Lambda식
 ```csharp
+// 값을 반환하지 않는 람다식 대리자 형식으로 변환해서 호출해보기
 Action helloWorld = () => Debug.Log("Hello, World!");
 helloWorld();
 
 Action<string> helloName = name => Debug.Log("Hello, " + name);
 helloName("Groot");
 ```
- - 코루틴에서 람다 사용의 예 (`WaitWhie`, `WaitUntil`)
+ - 람다삭을 사용하는 경우 예시 (코루틴에서 `WaitWhie`, `WaitUntil`)
 ```csharp
 public int hp;
 void Start()
@@ -292,7 +293,7 @@ IEnumerator DeadOrAlive()
 
 <br>
 
-4. IEnumerator 열거자란?
+4. IEnumerator 열거자란? `Current`, `MoveNext()`
 ```csharp
 IEnumerator GiveMeNumber()
 {
