@@ -208,6 +208,7 @@ public class CustomJump : MonoBehaviour
 > 강의 때 설명용으로 보여드린 코드들입니다. 강의자료에는 없기 때문에 따로 올립니다. 복습용으로 사용하세용!
 
 1. 좌클릭할 때 Instantiate하기
+
 ```csharp
 using UnityEngine;
 
@@ -233,6 +234,7 @@ public class SpawnManager : MonoBehaviour
 <br>
 
 2. Find By
+
  - Name: 이름을 바꾸지 못하게 된다
 ```csharp
 target = GameObject.Find("Target");
@@ -255,8 +257,10 @@ target.transform.position = Vector3.zero;
 
 <br>
 
-3. Lambda와 Func/Action
- - Func<T1, T2, ..., TResult> = 값을 반환하는 Lambda식
+3. `Lambda`와 `Func`/`Action`
+
+ - `Func<T1, T2, ..., TResult>` = 값을 반환하는 Lambda식
+ 
 ```csharp
 // 값을 반환하는 람다식 대리자 형식으로 변환해서 호출해보기
 Func<int, int, int> addition = (x, y) => x + y;
@@ -265,7 +269,9 @@ Debug.Log(addition(1, 2));
 Func<int, int, bool> isSame = (x, y) => x == y;
 Debug.Log(isSame(1, 2));
 ```
- - Action<T1, T2, ...> = 값을 반환하지 않는 Lambda식
+
+ - `Action<T1, T2, ...>` = 값을 반환하지 않는 Lambda식
+ 
 ```csharp
 // 값을 반환하지 않는 람다식 대리자 형식으로 변환해서 호출해보기
 Action helloWorld = () => Debug.Log("Hello, World!");
@@ -274,7 +280,9 @@ helloWorld();
 Action<string> helloName = name => Debug.Log("Hello, " + name);
 helloName("Groot");
 ```
+
  - 람다삭을 사용하는 경우 예시 (코루틴에서 `WaitWhie`, `WaitUntil`)
+ 
 ```csharp
 public int hp;
 void Start()
@@ -294,6 +302,7 @@ IEnumerator DeadOrAlive()
 <br>
 
 4. IEnumerator 열거자란? `Current`, `MoveNext()`
+
 ```csharp
 IEnumerator GiveMeNumber()
 {
@@ -316,7 +325,9 @@ void Start()
 <br>
 
 5. 일반적인 함수 vs 코루틴
+
  - 일반적인 함수
+ 
 ```csharp
 using UnityEngine;
 
@@ -343,7 +354,9 @@ public class PrintTest : MonoBehaviour
     }
 }
 ```
+
 - 코루틴
+
 ```csharp
 using System.Collections;
 using System.Collections.Generic;
@@ -382,7 +395,9 @@ public class PrintTest : MonoBehaviour
 <br>
 
 6. 업데이트 타이머 vs 코루틴 타이머
+
  - 업데이트 타이머
+ 
 ```csharp
 using System.Collections;
 using System.Collections.Generic;
@@ -406,7 +421,9 @@ public class TimerTest : MonoBehaviour
     }
 }
 ```
+
  - 코루틴 타이머
+ 
 ```csharp
 using System.Collections;
 using System.Collections.Generic;
