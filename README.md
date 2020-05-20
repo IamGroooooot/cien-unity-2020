@@ -204,6 +204,230 @@ public class CustomJump : MonoBehaviour
 
 > 숙제. [https://github.com/CIEN-Club/workshop-guestbook](https://github.com/CIEN-Club/workshop-guestbook)의 README.md를 읽고 저장소에 Push를 해서 방명록 남기기
 
+**강의 때 설명한 코드들**
+> 강의 때 설명용으로 보여드린 코드들입니다. 강의자료에는 없기 때문에 따로 올립니다. 복습용으로 사용하세용!
+
+1. 좌클릭할 때 Instantiate하기
+```csharp
+using UnityEngine;
+
+public class SpawnManager : MonoBehaviour 
+{
+    public GameObject missilePrefab;
+    GameObject temp;
+    int count = 0;
+
+    void Update()
+    {
+        // "Fire1"은 좌클릭 말고도 다른 키(터치, 조이스특, ...)도 인식함.
+        if (Input.GetButtonDown("Fire1"))
+        {
+            temp = Instantiate(missilePrefab);
+            temp.name = "Missile" + count++;
+            temp.transform.position = Vector3.zero;
+        }
+    }
+}
+```
+
+<br>
+
+2. Find By
+ - Name
+```csharp
+target = GameObject.Find("Target");
+target.transform.position = Vector3.zero;
+```
+
+ - Tag
+```csharp
+target = GameObject.FindGameObjectWithTag("Target");
+target.transform.position = Vector3.zero;
+```
+
+ - Type
+```csharp
+target = GameObject.FindObjectOfType<TargetCtrl>().gameObject;
+target.transform.position = Vector3.zero;
+```
+
++ Drag and Drop, Singleton, ...
+
+<br>
+
+3. Lambda와 Func/Action
+ - Func<T,TResult> = 값을 반환하는 Lambda
+```csharp
+// 람다식 대리자 형식으로 변환해서 호출해보기
+Func<int, int, int> addition = (x, y) => x + y;
+Debug.Log(addition(1, 2));
+
+Func<int, int, bool> isSame = (x, y) => x == x;
+Debug.Log(isSame(1, 2));
+```
+ - Action<T1,T2> = 값을 반환하지 않는 Lambda
+```csharp
+Action helloWorld = () => Debug.Log("Hello, World!");
+helloWorld();
+
+Action<string> helloName = name => Debug.Log("Hello, " + name);
+helloName("Groot");
+```
+ - 코루틴에서 람다 사용의 예 (`WaitWhie`, `WaitUntil`)
+```csharp
+public int hp;
+void Start()
+{
+    hp = 100;
+    StartCoroutine(DeadOrAlive());
+}
+
+IEnumerator DeadOrAlive()
+{
+    Debug.Log("Waiting for player to be dead");
+    yield return new WaitUntil(() => hp <= 0);
+    Debug.Log("Player is dead");
+}
+```
+
+<br>
+
+4. IEnumerator 열거자란?
+```csharp
+IEnumerator GiveMeNumber()
+{
+    yield return 1;
+    yield return 2;
+    yield return 3;
+}
+
+void Start()
+{
+    IEnumerator enumerator = GiveMeNumber();
+    for(int i = 0; i<4; i++)
+    {
+        Debug.Log(i + "번쩨의 Current: " + enumerator.Current);
+        Debug.Log(i + "번쩨의 MoveNext의 반환값: " + enumerator.MoveNext());
+    }
+}
+```
+
+<br>
+
+5. 일반적인 함수 vs 코루틴
+ - 일반적인 함수
+```csharp
+using UnityEngine;
+
+public class PrintTest : MonoBehaviour 
+{
+    void Print1()
+    {
+        Debug.Log("1-1");
+        Debug.Log("1-2");
+        Debug.Log("1-3");
+    }
+
+    void Print2()
+    {
+        Debug.Log("2-1");
+        Debug.Log("2-2");
+        Debug.Log("2-3");
+    }
+    
+    private void Start()
+    {
+        Print1();
+        Print2();
+    }
+}
+```
+- 코루틴
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PrintTest : MonoBehaviour 
+{
+    IEnumerator Print3()
+    {
+        Debug.Log("1-1");
+        yield return null;
+        Debug.Log("1-2");
+        yield return null;
+        Debug.Log("1-3");
+        yield return null;
+    }
+
+    IEnumerator Print4()
+    {
+        Debug.Log("2-1");
+        yield return null;
+        Debug.Log("2-2");
+        yield return null;
+        Debug.Log("2-3");
+        yield return null;
+    }
+
+    private void OnEnable()
+    {
+        StartCoroutine(Print3());
+        StartCoroutine(Print4());
+    }
+}
+```
+
+<br>
+
+6. 업데이트 타이머 vs 코루틴 타이머
+ - 업데이트 타이머
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TimerTest : MonoBehaviour 
+{
+    float time = 0;
+    float limitTime = 3f;
+    
+    private void Update() 
+    {
+        time += Time.deltaTime;
+        if(time >= limitTime)
+        {
+            Debug.Log(limitTime + " seconds passed.");
+            time = 0;
+        }
+
+        // 업데이트에서 호출할 다른 함수들
+    }
+}
+```
+ - 코루틴 타이머
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TimerTest : MonoBehaviour 
+{
+    private void OnEnable()
+    {
+        StartCoroutine(TimerEvent(3));
+    }
+
+    IEnumerator TimerEvent(float limitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(limitTime);
+            Debug.Log(limitTime + " seconds passed.");
+        }
+    }
+}
+```
 ---
 
 ### 5주차. 적기 구현 및 적 매니저
