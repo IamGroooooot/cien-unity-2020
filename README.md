@@ -518,4 +518,7 @@ public class TimerTest : MonoBehaviour
 
 ---
 
-수업 영상: [유튜브](https://www.youtube.com/playlist?list=PLl6IHQS9eTa0tv32BOR_jMvp1uatayAjs)
+## 기타
+ - 2019 CIEN 초급반 C# 문법 스터디: [GitHub저장소](https://github.com/IamGroooooot/Sprout-See_eek) - CIEN_C#교실
+ - 2019 CIEN 중급반 Unity3D 스터디: [GitHub저장소](https://github.com/IamGroooooot/cien-unity-2019) - 3주만에 끝내는 유니티 수업
+ - 수업 영상: [중앙대-Stream](https://web.microsoftstream.com/channel/8e0bce7d-f862-4631-8042-f9616e367a58)
