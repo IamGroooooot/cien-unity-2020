@@ -281,7 +281,7 @@ Action<string> helloName = name => Debug.Log("Hello, " + name);
 helloName("Groot");
 ```
 
- - 람다식을 사용하는 경우 예시 (코루틴에서 `WaitWhie`, `WaitUntil`)
+ - 람다식을 사용하는 경우 예시 (코루틴에서 `WaitWhile`, `WaitUntil`)
  
 ```csharp
 public int hp;
