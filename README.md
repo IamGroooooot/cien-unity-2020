@@ -490,7 +490,6 @@ public class TimerTest : MonoBehaviour
     - 이미지 버튼
 - World 게임오브젝트의 마우스 감지
 - 씬(Scene) 이동
-    - GameOver 씬
 - 점수창 만들기
 
 **강의 때 설명한 코드들**
@@ -609,7 +608,7 @@ public class OnCubeClick : MonoBehaviour {
 
 ---
 
-### 7주차. 게임 데이터 관리
+### 7주차. 게임 데이터와 빌드하기
 #### 7주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/7.%20%EA%B2%8C%EC%9E%84%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%99%80%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/7.%20%EA%B2%8C%EC%9E%84%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%99%80%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.pdf)
 - 세이브 파일
 - Key로 사용하기 좋은 Enum Type
