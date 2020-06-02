@@ -475,27 +475,40 @@ public class TimerTest : MonoBehaviour
 
 ---
 
-### 6주차. 유니티 UI
-- UI 구성
-    - 캔버스
-    - 해상도
-    - 앵커
+### 6주차. 유니티의 UI
+#### 6주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/6.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%EC%9D%98%20UI.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/6.%20%EC%9C%A0%EB%8B%88%ED%8B%B0%EC%9D%98%20UI.pdf)
+- 유니티의 UI란?
+- UI를 위한 개념들
+    - 화면 해상도
+    - Canvas
+    - Anchor
+    - Render Mode (Overlay, Camera, World)
 - 텍스트
 - 버튼
+- 이미지
+    - Fill을 이용한 다양한 활용법
+    - 이미지 버튼
+- World 게임오브젝트의 마우스 감지
 - 씬(Scene) 이동
     - GameOver 씬
 - 점수창 만들기
-    - 점수 매니저
 
 ---
 
 ### 7주차. 게임 데이터 관리
+#### 7주차 스터디 자료: [`PPT`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/7.%20%EA%B2%8C%EC%9E%84%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%99%80%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.pptx) [`PDF`](https://github.com/IamGroooooot/cien-unity-2020/raw/master/7.%20%EA%B2%8C%EC%9E%84%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%99%80%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.pdf)
+- 세이브 파일
+- Key로 사용하기 좋은 Enum Type
 - PlayerPref
-    - Enum
     - Save
     - Load
-- 빌드하기
-- 공유
+- Instance 복구하기
+- Json, CSV, ...
+- 빌드
+    - 안드로이드/iOS App 빌드
+    - PC 빌드
+    - Web 빌드
+      - GitHub Page로 공유하기
 
 ---
 
