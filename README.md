@@ -493,6 +493,120 @@ public class TimerTest : MonoBehaviour
     - GameOver 씬
 - 점수창 만들기
 
+**강의 때 설명한 코드들**
+> 강의 때 설명용으로 보여드린 코드들입니다. 
+
+ - 텍스트 바꾸기
+
+```csharp
+using UnityEngine;
+using UnityEngine.UI;
+
+public class TextCtrl : MonoBehaviour
+{
+    private Text targetText;
+    public int score = 99;
+    // Start is called before the first frame update
+    void Start()
+    {
+        targetText = GameObject.Find("MyTargetText").GetComponent<Text>();
+
+        if (targetText != null)
+            targetText.text = "점수: " + score;
+        else
+            Debug.Log("GameObject 체크 ㄱㄱ");
+    }
+}
+```
+
+<br>
+
+ - 버튼 클릭
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class OnClickFunctions : MonoBehaviour {
+    int score = 0;
+    UnityEngine.UI.Text textInstance = null;
+    
+    private void Start()
+    {
+        textInstance = GameObject.Find("MyTargetText").GetComponent<UnityEngine.UI.Text>();
+    }
+
+    public void OnClickButtonTest()
+    {
+        Debug.Log("버튼을 눌렀습니다.");
+    }
+
+    public void OnClickCat()
+    {
+        Debug.Log("고양이을 눌렀습니다.");
+        textInstance.text = "고양이 누른 횟수: " + ++score;
+    }
+
+    public void MoveToSampleScene()
+    {
+        SceneManager.LoadScene("Scenes/SampleScene");
+    }
+}
+```
+
+<br>
+
+ - 이미지 Fill 활용하기: Cool Time
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CoolTime : MonoBehaviour
+{
+    private Image coolTimeImage;
+    // Start is called before the first frame update
+    void Start()
+    {
+        coolTimeImage = GameObject.Find("CoolTime").GetComponent<Image>();
+        StartCoroutine(ShowCoolTime(coolTimeImage, 4f));
+    }
+
+    IEnumerator ShowCoolTime(Image img, float coolTime)
+    {
+        float delta = 1f / coolTime;
+        img.fillAmount = 1f;
+        while (img.fillAmount >= 0)
+        {
+            yield return new WaitForSeconds(1);
+            img.fillAmount -= delta;
+        }
+    }
+}
+```
+
+<br>
+
+ - World의 게임오브젝트 마우스 클릭
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class OnCubeClick : MonoBehaviour {
+    // Collider 필요!
+    private void OnMouseDown()
+    {
+        Destroy(gameObject);
+    }
+}
+```
+
 ---
 
 ### 7주차. 게임 데이터 관리
@@ -509,6 +623,146 @@ public class TimerTest : MonoBehaviour
     - PC 빌드
     - Web 빌드
       - GitHub Page로 공유하기
+
+**강의 때 설명한 코드들**
+> 강의 때 설명용으로 보여드린 코드들입니다. 
+
+ - Enum(열거형)
+
+```csharp
+public enum VariableType
+{
+    eUserName = 0,
+    eUserScore,
+    // …
+}
+```
+
+<br>
+
+ - Enum을 key로하는 PlayerPref
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameVariableManager : MonoBehaviour
+{
+    public static GameVariableManager instance = null;        // for singleton
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    /// <summary>
+    /// 타입 이넘값으로 값을 저장해준다.
+    /// string value 전용
+    /// </summary>
+    public void SaveVariable(VariableType type, string value)
+    {
+        // 이넘값 변환
+        string key = type.ToString();
+        // 변환한 값을 그대로 넣어주자.
+        PlayerPrefs.SetString(key, value);
+    }
+
+    /// <summary>
+    /// 타입 이넘값으로 값을 저장해준다.
+    /// Int value 전용
+    /// </summary>
+    public void SaveVariable(VariableType type, int value)
+    {
+        // 이넘값 변환
+        string key = type.ToString();
+        // 변환한 값을 그대로 넣어주자.
+        PlayerPrefs.SetInt(key, value);
+    }
+
+    /// <summary>
+    /// 타입 이넘값으로 값을 저장해준다.
+    /// Float value 전용
+    /// </summary>
+    public void SaveVariable(VariableType type, float value)
+    {
+        // 이넘값 변환
+        string key = type.ToString();
+        // 변환한 값을 그대로 넣어주자.
+        PlayerPrefs.SetFloat(key, value);
+    }
+
+    /// <summary>
+    /// 타입 이넘값을 바탕으로 저장된 값을 불러온다.
+    /// </summary>
+    public string LoadStringVariable(VariableType type)
+    {
+        // 이넘값 변환
+        string key = type.ToString();
+        // 불러오기
+        string returnValue = PlayerPrefs.GetString(key);
+        Debug.Log("LoadValue[" + key + "] = " + returnValue.ToString());
+        return returnValue;
+    }
+
+    /// <summary>
+    /// 타입 이넘값을 바탕으로 저장된 값을 불러온다.
+    /// </summary>
+    public int LoadIntVariable(VariableType type)
+    {
+        // 이넘값 변환
+        string key = type.ToString();
+        // 불러오기
+        int returnValue = PlayerPrefs.GetInt(key);
+        Debug.Log("LoadValue[" + key + "] = " + returnValue.ToString());
+        return returnValue;
+    }
+
+    /// <summary>
+    /// 타입 이넘값을 바탕으로 저장된 값을 불러온다.
+    /// </summary>
+    public float LoadFloatVariable(VariableType type)
+    {
+        // 이넘값 변환
+        string key = type.ToString();
+        // 불러오기
+        float returnValue = PlayerPrefs.GetFloat(key);
+        Debug.Log("LoadValue[" + key + "] = " + returnValue.ToString());
+        return returnValue;
+    }
+}
+```
+
+<br>
+
+ - Instance 저장하고 불러오기
+
+``` csharp
+public class Charactor
+{
+    int age;
+    string name;
+    string materialPath;
+    Material material;
+
+    // Instance를 string으로 변환
+    public override string ToString()
+    {
+        // Format은 Json, CSV, ..., 또는 내가 정의
+        return name+ ", " + age + ", " + materialPath;
+    }
+
+    // 저장한 string 데이터로 Instance 다시 불러오기
+    public Charactor(string classInfo)
+    {
+        // ,를 기준으로 split
+        this.name = "name부분";
+        this.age = System.Convert.ToInt32("age부분");
+        this.materialPath = "materialPath부분";
+        // Resources 폴더 안의 materialPath에 있는 Material을 불러온다
+        material = Resources.Load<Material>(materialPath);
+    }
+}
+```
 
 ---
 
